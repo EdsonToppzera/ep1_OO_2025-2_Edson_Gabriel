@@ -1,3 +1,6 @@
+# ep1_OO_2025-2_Edson_Gabriel
+Repositoria do ep 1 da disciplina OO na UnB
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
