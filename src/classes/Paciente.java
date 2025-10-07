@@ -1,16 +1,18 @@
 package classes;
+
 import java.util.List;
 import java.util.ArrayList;
 
 public class Paciente {
+
     private String nome;
     private String cpf;
     private int idade;
     private PlanoDeSaude planoDeSaude;
-    private List<Consulta> historicoConsulta;
-    private List<Internacao> historioInternacao;
+    private List<Consulta> historicoConsultas; 
+    private List<Internacao> historicoInternacoes;
 
-    //construtores
+    // Construtor
     public Paciente(String nome, String cpf, int idade) {
         this.nome = nome;
         this.cpf = cpf;
@@ -20,24 +22,25 @@ public class Paciente {
         this.historicoInternacoes = new ArrayList<>();
     }
 
-    //Veririfica se o cliente eh especial (tem plano)
+    // Ve se o cliente eh especial
     public boolean isEspecial() {
         return this.planoDeSaude != null;
     }
 
-    // TALVEZ TENHA Q MUDAR.. add uma consulta/internacao ao paciente
+    // adiciona uma consulta ao histórico
     public void adicionarConsultaAoHistorico(Consulta consulta) {
         if (consulta != null) {
             this.historicoConsultas.add(consulta);
         }
     }
+
+    // adiciona uma internação ao histórico
     public void adicionarInternacaoAoHistorico(Internacao internacao) {
         if (internacao != null) {
             this.historicoInternacoes.add(internacao);
         }
     }
 
-    //getters e setters
     public String getNome() {
         return nome;
     }
@@ -80,13 +83,13 @@ public class Paciente {
         return historicoInternacoes;
     }
 
-    
-    //TALVEZ MUDE.. faz o log de um paciente com seus atributos
+    // log do paciente
+    @Override
     public String toString() {
         return "Paciente{" +
-                "nome: '" + nome + '\'' +
-                ", cpf: '" + cpf + '\'' +
-                ", plano: " + (isEspecial() ? planoDeSaude.getNomeDoPlano() : "Nenhum") +
-                '}';
+            "nome='" + nome + '\'' +
+            ", cpf='" + cpf + '\'' +
+            ", plano=" + (isEspecial() ? planoDeSaude.getNomeDoPlano() : "Nenhum") +
+            '}';
     }
 }
