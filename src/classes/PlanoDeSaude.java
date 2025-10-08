@@ -8,6 +8,8 @@ public class PlanoDeSaude {
     private String nome;
     private boolean pagaInternacao;
     private Map<Especialidade, Double> descontos;
+    private static final int IDADE_IDOSO = 60;
+    private static final double DESCONTO_ADICIONAL_IDOSO = 10.0;
 
     public PlanoDeSaude(String nome, boolean pagaInternacao) {
         this.nome = nome;
@@ -15,34 +17,41 @@ public class PlanoDeSaude {
         this.descontos = new HashMap<>();
     }
 
-    //caso nn pague internacao, eh so chamar o nome
+    // caso nn tenha plano eh so meter o nome
     public PlanoDeSaude(String nome) {
         this(nome, false);
     }
 
-    //add desconto para uma especialidade
+    // Adiciona desconto para cada especialidade
     public void adicionarDesconto(Especialidade especialidade, double percentualDesconto) {
         if (percentualDesconto >= 0 && percentualDesconto <= 100) {
             this.descontos.put(especialidade, percentualDesconto);
         }
     }
 
-    //calcula o desconto
-    public double calcularDesconto(Especialidade especialidade, double valorOriginal) {
+    public double calcularDesconto(Especialidade especialidade, double valorOriginal, int idadePaciente) {
+        double descontoTotal = 0.0;
+        
+        // Desconto por especialidade
         if (descontos.containsKey(especialidade)) {
             double percentualDesconto = descontos.get(especialidade);
-            return valorOriginal * (percentualDesconto / 100);
+            descontoTotal += valorOriginal * (percentualDesconto / 100);
         }
-        return 0.0;
+        // Desconto adicional para idoso
+        if (idadePaciente >= IDADE_IDOSO) {
+            descontoTotal += valorOriginal * (DESCONTO_ADICIONAL_IDOSO / 100);
+        }
+        
+        return descontoTotal;
     }
 
-    // Calcula o valor final com desconto
-    public double calcularValorComDesconto(Especialidade especialidade, double valorOriginal) {
-        double desconto = calcularDesconto(especialidade, valorOriginal);
-        return valorOriginal - desconto;
+    // Calcula o valor final
+    public double calcularValorComDesconto(Especialidade especialidade, double valorOriginal, int idadePaciente) {
+        double desconto = calcularDesconto(especialidade, valorOriginal, idadePaciente);
+        return Math.max(valorOriginal - desconto, 0.0);
     }
 
-    // Verifica se tem desconto para uma especialidade
+    // Verifica se tem desconto
     public boolean temDescontoPara(Especialidade especialidade) {
         return descontos.containsKey(especialidade);
     }
@@ -75,7 +84,7 @@ public class PlanoDeSaude {
         this.descontos = descontos;
     }
 
-    // log do plano
+    //log do plano
     @Override
     public String toString() {
         return "PlanoDeSaude{" +
