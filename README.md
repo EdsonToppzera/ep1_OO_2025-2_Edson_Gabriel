@@ -26,11 +26,12 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
    cd scr -> java classes.Interface
 
 3. **Estrutura de Pastas:**  
+```
    ep1_OO_2025-2_Edson_Gabriel/
    │
    ├──.vscode 
-   ├──bin
-   ├──lib (criados pela extensao de projeto java)
+   ├──bin/
+   ├──lib/ (criados pela extensao de projeto java)
    ├── src/
    │   ├── classes/
    │   │   ├── Paciente.java
@@ -52,6 +53,7 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
    │       └── internacoes.csv
    │
    └── README.md
+```
 
 3. **Versão do JAVA utilizada:**  
    java 21
