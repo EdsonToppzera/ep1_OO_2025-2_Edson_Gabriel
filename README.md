@@ -20,16 +20,41 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
 ## Instruções para Compilação e Execução
 
 1. **Compilação:**  
-   [Descrever aqui como compilar o projeto. Exemplo: `javac Main.java` ou o script usado]
+   cd scr -> javac classes/*.java
 
 2. **Execução:**  
-   [Descrever aqui como executar o projeto. Exemplo: `java Main` ou o script usado]
+   cd scr -> java classes.Interface
 
 3. **Estrutura de Pastas:**  
-   [Descrever aqui as principais pastas do projeto]
+   ep1_OO_2025-2_Edson_Gabriel/
+   │
+   ├──.vscode 
+   ├──bin
+   ├──lib (criados pela extensao de projeto java)
+   ├── src/
+   │   ├── classes/
+   │   │   ├── Paciente.java
+   │   │   ├── PacienteEspecial.java
+   │   │   ├── Medico.java
+   │   │   ├── PlanoDeSaude.java
+   │   │   ├── Especialidade.java
+   │   │   ├── Consulta.java
+   │   │   ├── Internacao.java
+   │   │   ├── Hospital.java
+   │   │   ├── GerenciadorArquivos.java
+   │   │   └── Interface.java
+   │   │
+   │   └── dados/  (aparece so depois de encerrar o programa)
+   │       ├── pacientes.csv
+   │       ├── medicos.csv
+   │       ├── planos.csv
+   │       ├── consultas.csv
+   │       └── internacoes.csv
+   │
+   └── README.md
 
 3. **Versão do JAVA utilizada:**  
-   [Descrever aqui como versão do JAVA utilizada no projeto. Sugestão: `java 21`]
+   java 21
 
 ---
 
@@ -57,7 +82,11 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
 ## Observações (Extras ou Dificuldades)
 
 - Dificuldades:
-  Achar um lugar para aplicar o conceito de herança -> Criei a classe PacienteEspecial
+   - Achar por onde começar, quais classes criar
+   - Achar um lugar para aplicar o conceito de herança -> Criei a classe PacienteEspecial
+   - Impletar a parte de salvar dados
+   - Achar uma maneira simples de implementar as especiliades, tava na duvida se faria algo mais dinamico com o usuario adicionando qualquer, ou um map com descontos prefixos etc. Decidi fazer algo bem simples com os enums.
+   - Muitos.. e muitos problemas tecnicos.
 
 ---
 
