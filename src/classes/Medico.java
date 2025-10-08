@@ -11,6 +11,7 @@ public class Medico {
     private Especialidade especialidade;
     private double custoConsulta;
     private List<Consulta> agendaConsultas;
+    private int numeroConsultasRealizadas;
 
     // Construtor
     public Medico(String nome, String crm, Especialidade especialidade, double custoConsulta) {
@@ -25,6 +26,9 @@ public class Medico {
         if (consulta != null) {
             this.agendaConsultas.add(consulta);
         }
+    }
+    public void registrarConsultaRealizada() {
+        this.numeroConsultasRealizadas++;
     }
 
     public boolean removerConsultaAgenda(Consulta consulta) {
