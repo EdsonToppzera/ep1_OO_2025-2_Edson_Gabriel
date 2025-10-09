@@ -77,6 +77,7 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
 ## Prints da Execução
 
 1. Menu Principal:  
+<<<<<<< HEAD
    ![Inserir Print 1](imgs/Menu_principal_OO.png)
 
 2. Cadastro Plano de Saude:
@@ -90,6 +91,21 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
 
 5. Agendamento:
    ![Inserir Print 3](imgs/Agendamento_OO.png)
+=======
+   ![Inserir Print 1](/imgs/Agendamento OO.png)
+
+2. Cadastro Plano de Saude:
+   ![Inserir Print 2](/imgs/Cadastro plano OO.png)
+
+3. Cadastro Paciente:
+   ![Inserir Print 2](/imgs/cadastro paciente OO.png)
+
+4. Cadastro de Médico:  
+   ![Inserir Print 2](/imgs/cadastro medico OO.png)
+
+5. Agendamento:
+   ![Inserir Print 3](/imgs/Agendamento OO.png)
+>>>>>>> 5672eed86f1f46ed27ba4381a2db3a0daad2cf69
 
 6. Relatório Geral:  
    ![Inserir Print 3](imgs/Estatisticas_gerais_OO.png)
