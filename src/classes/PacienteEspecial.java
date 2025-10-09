@@ -2,7 +2,6 @@ package classes;
 
 public class PacienteEspecial extends Paciente {
 
-    // Construtor - OBRIGATORIAMENTE recebe um plano de saúde
     public PacienteEspecial(String nome, String cpf, int idade, PlanoDeSaude planoDeSaude) {
         super(nome, cpf, idade);
         
@@ -18,7 +17,8 @@ public class PacienteEspecial extends Paciente {
         return this.getPlanoDeSaude().calcularValorComDesconto(
             especialidade, 
             valorOriginal, 
-            this.getIdade()  // Passa a idade para o plano aplicar desconto de idoso
+            // Passa a idade para o plano aplicar desconto de idoso
+            this.getIdade()  
         );
     }
 
@@ -36,7 +36,7 @@ public class PacienteEspecial extends Paciente {
         return this.getPlanoDeSaude().isPagaInternacao();
     }
 
-    // Sobrescreve o método isEspecial para sempre retornar true
+    // Sobrescreve o método isEspecial para retornar true
     @Override
     public boolean isEspecial() {
         return true;

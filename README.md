@@ -45,12 +45,20 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
    │   │   ├── GerenciadorArquivos.java
    │   │   └── Interface.java
    │   │
-   │   └── dados/  (aparece so depois de encerrar o programa)
-   │       ├── pacientes.csv
-   │       ├── medicos.csv
-   │       ├── planos.csv
-   │       ├── consultas.csv
-   │       └── internacoes.csv
+   │   ├── dados/  (aparece so depois de encerrar o programa)
+   │   │    ├── pacientes.csv
+   │   │    ├── medicos.csv
+   │   │    ├── planos.csv
+   │   │    ├── consultas.csv
+   │   │    └── internacoes.csv
+   │   │
+   │   └── imgs/
+   │        ├── Agendamento OO.png
+   │        ├── Cadastro plano OO.png
+   │        ├── cadastro paciente OO.png
+   │        ├── cadastro medico OO.png
+   │        ├── Agendamento OO.png
+   │        └── Estatisticas gerais OO.png
    │
    └── README.md
 ```
@@ -62,22 +70,29 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
 
 ## Vídeo de Demonstração
 
-- [Inserir o link para o vídeo no YouTube/Drive aqui]
+- [https://youtu.be/b--xcb-2Lz0]
 
 ---
 
 ## Prints da Execução
 
 1. Menu Principal:  
-   ![Inserir Print 1](caminho/do/print1.png)
+   ![Inserir Print 1](src/imgs/Agendamento OO.png)
 
-2. Cadastro de Médico:  
-   ![Inserir Print 2](caminho/do/print2.png)
+2. Cadastro Plano de Saude:
+   ![Inserir Print 2](src/imgs/Cadastro plano OO.png)
 
-3. Relatório de ?:  
-   ![Inserir Print 3](caminho/do/print3.png)
+3. Cadastro Paciente:
+   ![Inserir Print 2](src/imgs/cadastro paciente OO.png)
 
----
+4. Cadastro de Médico:  
+   ![Inserir Print 2](src/imgs/cadastro medico OO.png)
+
+5. Agendamento:
+   ![Inserir Print 3](src/imgs/Agendamento OO.png)
+
+6. Relatório Geral:  
+   ![Inserir Print 3](src/imgs/Estatisticas gerais OO.png)
 
 ---
 
@@ -94,7 +109,7 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
 
 ## Contato
 
-- edsongabrielbb@gmai.com
+- edsongabrielbb@gmail.com
 
 ---
 

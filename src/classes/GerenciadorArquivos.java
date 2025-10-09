@@ -52,7 +52,7 @@ public class GerenciadorArquivos {
                     m.getNome(), m.getCrm(), m.getEspecialidade(), 
                     m.getCustoConsulta(), m.getNumeroConsultasRealizadas()));
             }
-            System.out.println("✓ Médicos salvos com sucesso!");
+            System.out.println("Médicos salvos com sucesso!");
         } catch (IOException e) {
             System.err.println("Erro ao salvar médicos: " + e.getMessage());
         }
@@ -71,7 +71,7 @@ public class GerenciadorArquivos {
                 writer.write(String.format("%s;%s;%s\n",
                     p.getNome(), p.isPagaInternacao(), descontos.toString()));
             }
-            System.out.println("✓ Planos salvos com sucesso!");
+            System.out.println("Planos salvos com sucesso!");
         } catch (IOException e) {
             System.err.println("Erro ao salvar planos: " + e.getMessage());
         }
@@ -142,7 +142,7 @@ public class GerenciadorArquivos {
         }
         
         try (BufferedReader reader = new BufferedReader(new FileReader(ARQUIVO_PLANOS))) {
-            String linha = reader.readLine(); // Pula cabeçalho
+            String linha = reader.readLine();
             
             while ((linha = reader.readLine()) != null) {
                 String[] dados = linha.split(";");
@@ -166,7 +166,7 @@ public class GerenciadorArquivos {
                 
                 planos.add(plano);
             }
-            System.out.println("✓ Planos carregados com sucesso!");
+            System.out.println("Planos carregados com sucesso!");
         } catch (IOException e) {
             System.err.println("Erro ao carregar planos: " + e.getMessage());
         }
@@ -204,7 +204,7 @@ public class GerenciadorArquivos {
                 
                 pacientes.add(paciente);
             }
-            System.out.println("✓ Pacientes carregados com sucesso!");
+            System.out.println("Pacientes carregados com sucesso!");
         } catch (IOException e) {
             System.err.println("Erro ao carregar pacientes: " + e.getMessage());
         }
@@ -221,7 +221,7 @@ public class GerenciadorArquivos {
         }
         
         try (BufferedReader reader = new BufferedReader(new FileReader(ARQUIVO_MEDICOS))) {
-            String linha = reader.readLine(); // Pula cabeçalho
+            String linha = reader.readLine();
             
             while ((linha = reader.readLine()) != null) {
                 String[] dados = linha.split(";");
@@ -236,7 +236,7 @@ public class GerenciadorArquivos {
                 
                 medicos.add(medico);
             }
-            System.out.println("✓ Médicos carregados com sucesso!");
+            System.out.println("Médicos carregados com sucesso!");
         } catch (IOException e) {
             System.err.println("Erro ao carregar médicos: " + e.getMessage());
         }

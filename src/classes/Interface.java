@@ -109,7 +109,7 @@ public class Interface {
             case 0:
                 break;
             default:
-                System.out.println("Opção inválida!");
+                System.out.println("Opção inválida");
         }
     }
 
@@ -147,9 +147,9 @@ public class Interface {
         }
         
         if (hospital.cadastrarPaciente(paciente)) {
-            System.out.println("✓ Paciente cadastrado com sucesso!");
+            System.out.println("Paciente cadastrado com sucesso!");
         } else {
-            System.out.println("✗ Erro: CPF já cadastrado.");
+            System.out.println("CPF já cadastrado.");
         }
     }
 
@@ -172,7 +172,7 @@ public class Interface {
             try {
                 especialidade = Especialidade.valueOf(espStr);
             } catch (IllegalArgumentException e) {
-                System.out.println("Especialidade inválida! Digite exatamente como aparece na lista (ex: CARDIOLOGIA).");
+                System.out.println("Especialidade inválida, Digite exatamente como aparece na lista.");
             }
         }
 
@@ -182,9 +182,9 @@ public class Interface {
         Medico medico = new Medico(nome, crm, especialidade, custo);
 
         if (hospital.cadastrarMedico(medico)) {
-            System.out.println("✓ Médico cadastrado com sucesso!");
+            System.out.println("Médico cadastrado com sucesso!");
         } else {
-            System.out.println("✗ Erro: CRM já cadastrado.");
+            System.out.println("Erro: CRM já cadastrado.");
         }
     }
 
@@ -207,9 +207,9 @@ public class Interface {
         }
         
         if (hospital.cadastrarPlanoDeSaude(plano)) {
-            System.out.println("✓ Plano de saúde cadastrado com sucesso!");
+            System.out.println("Plano de saúde cadastrado com sucesso!");
         } else {
-            System.out.println("✗ Erro: Plano já cadastrado.");
+            System.out.println("Erro: Plano já cadastrado.");
         }
     }
 
@@ -222,7 +222,7 @@ public class Interface {
         Paciente paciente = hospital.buscarPacientePorCpf(cpf);
         
         if (paciente == null) {
-            System.out.println("✗ Paciente não encontrado.");
+            System.out.println("Paciente não encontrado.");
             return;
         }
         
@@ -231,7 +231,7 @@ public class Interface {
         Medico medico = hospital.buscarMedicoPorCrm(crm);
         
         if (medico == null) {
-            System.out.println("✗ Médico não encontrado.");
+            System.out.println("Médico não encontrado.");
             return;
         }
         
@@ -246,7 +246,7 @@ public class Interface {
         Consulta consulta = hospital.agendarConsulta(paciente, medico, dataHora, local);
         
         if (consulta != null) {
-            System.out.println("✓ Consulta agendada com sucesso!");
+            System.out.println("Consulta agendada com sucesso!");
             System.out.println(consulta);
         }
     }
@@ -258,7 +258,7 @@ public class Interface {
         Paciente paciente = hospital.buscarPacientePorCpf(cpf);
         
         if (paciente == null) {
-            System.out.println("✗ Paciente não encontrado.");
+            System.out.println("Paciente não encontrado.");
             return;
         }
         
@@ -267,7 +267,7 @@ public class Interface {
         Medico medico = hospital.buscarMedicoPorCrm(crm);
         
         if (medico == null) {
-            System.out.println("✗ Médico não encontrado.");
+            System.out.println("Médico não encontrado.");
             return;
         }
         
@@ -286,7 +286,7 @@ public class Interface {
             dataEntrada, quarto, custoDiaria);
         
         if (internacao != null) {
-            System.out.println("✓ Internação registrada com sucesso!");
+            System.out.println("Internação registrada com sucesso!");
             System.out.println(internacao);
         }
     }
@@ -308,9 +308,9 @@ public class Interface {
             String prescricao = scanner.nextLine();
             
             consulta.concluirConsulta(diagnostico, prescricao);
-            System.out.println("✓ Consulta concluída!");
+            System.out.println("Consulta concluída!");
         } else {
-            System.out.println("✗ Consulta inválida.");
+            System.out.println("Consulta inválida.");
         }
     }
 
@@ -329,11 +329,11 @@ public class Interface {
                 DateTimeFormatter.ofPattern("dd/MM/yyyy"));
             
             if (hospital.finalizarInternacao(internacao, dataSaida)) {
-                System.out.println("✓ Internação finalizada!");
+                System.out.println("Internação finalizada!");
                 System.out.println(internacao.getInformacoesCompletas());
             }
         } else {
-            System.out.println("✗ Internação inválida.");
+            System.out.println("Internação inválida.");
         }
     }
 
@@ -346,9 +346,9 @@ public class Interface {
         if (indice >= 0 && indice < hospital.getConsultas().size()) {
             Consulta consulta = hospital.getConsultas().get(indice);
             consulta.cancelarConsulta();
-            System.out.println("✓ Consulta cancelada!");
+            System.out.println("Consulta cancelada!");
         } else {
-            System.out.println("✗ Consulta inválida.");
+            System.out.println("Consulta inválida.");
         }
     }
 
@@ -362,10 +362,10 @@ public class Interface {
             Internacao internacao = hospital.getInternacoes().get(indice);
             
             if (hospital.cancelarInternacao(internacao)) {
-                System.out.println("✓ Internação cancelada!");
+                System.out.println("Internação cancelada!");
             }
         } else {
-            System.out.println("✗ Internação inválida.");
+            System.out.println("Internação inválida.");
         }
     }
 
